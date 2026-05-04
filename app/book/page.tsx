@@ -152,8 +152,8 @@ export default function BookPage() {
               <p className="text-gray-600 text-sm mb-4">
                 Talk to Danielle, our scheduling coordinator. She&apos;ll get you set up quickly.
               </p>
-              <Button render={<a href="tel:+1XXXXXXXXXX" />} className="w-full bg-[#0A1628] hover:bg-[#1a2a42] text-white font-semibold">
-                (XXX) XXX-XXXX
+              <Button render={<a href="tel:+16783100267" />} className="w-full bg-[#0A1628] hover:bg-[#1a2a42] text-white font-semibold">
+                (678) 310-0267
               </Button>
               <div className="mt-4 text-center">
                 <span className="text-[#C8102E] font-semibold text-sm">Hablamos español</span>

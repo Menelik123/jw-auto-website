@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { Shield, Users, Award, Wrench, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -81,26 +82,37 @@ export default function AboutPage() {
                   This building in Mableton has been an AC specialist shop for over 35 years. The previous owner operated here for 17 years, building deep expertise in automotive AC systems before John Wanarski took over in 2008.
                 </p>
                 <p>
-                  John didn&apos;t just inherit a location — he inherited a standard. He&apos;s continued and expanded the shop&apos;s reputation, adding complex electrical diagnostics to the specialty work and turning JW Auto into the shop that other mechanics in Cobb County call when they&apos;re stuck.
+                  John didn&apos;t just inherit a location — he inherited a standard. He&apos;s continued and expanded the shop&apos;s reputation, adding complex electrical diagnostics to the specialty work and turning JW Auto Service into the shop that other mechanics in Cobb County call when they&apos;re stuck.
                 </p>
                 <p>
                   In 18 years at the helm, John has built a Google rating of 4.7 stars with over 100 reviews — nearly all of them unprompted, from customers who came in skeptical and left believers.
                 </p>
               </div>
-            </div>
-            <div className="bg-[#0A1628] rounded-2xl p-8">
-              <div className="grid grid-cols-2 gap-6 text-center">
+              <div className="grid grid-cols-2 gap-4 mt-8">
                 {[
                   { value: "2008", label: "John took over" },
                   { value: "35+", label: "Years, this location" },
                   { value: "4.7★", label: "Google rating" },
                   { value: "100+", label: "Verified reviews" },
                 ].map((stat) => (
-                  <div key={stat.label}>
-                    <div className="text-4xl font-black text-[#C8102E] mb-1">{stat.value}</div>
-                    <div className="text-white/60 text-sm">{stat.label}</div>
+                  <div key={stat.label} className="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center">
+                    <div className="text-3xl font-black text-[#C8102E] mb-1">{stat.value}</div>
+                    <div className="text-gray-500 text-xs">{stat.label}</div>
                   </div>
                 ))}
+              </div>
+            </div>
+            <div className="relative rounded-2xl overflow-hidden shadow-xl">
+              <Image
+                src="/images/john-working-1.jpg"
+                alt="John Wanarski performing electrical diagnostics at JW Auto Service"
+                width={600}
+                height={500}
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#0A1628] to-transparent p-6">
+                <div className="text-white font-bold">John Wanarski</div>
+                <div className="text-white/60 text-sm">Owner & Master Technician · Since 2008</div>
               </div>
             </div>
           </div>

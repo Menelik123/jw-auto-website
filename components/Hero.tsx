@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Phone, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -8,17 +9,17 @@ import { Button } from "@/components/ui/button";
 export default function Hero() {
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-[#0A1628]">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0A1628] via-[#0f1f3d] to-[#0A1628] opacity-90" />
-        {/* Decorative grid */}
-        <div
-          className="absolute inset-0 opacity-5"
-          style={{
-            backgroundImage: `linear-gradient(#C8102E 1px, transparent 1px), linear-gradient(90deg, #C8102E 1px, transparent 1px)`,
-            backgroundSize: "60px 60px",
-          }}
+      {/* Background photo */}
+      <div className="absolute inset-0">
+        <Image
+          src="/images/shop-exterior.jpg"
+          alt="JW Auto Service — Mableton, Georgia"
+          fill
+          className="object-cover object-center"
+          priority
         />
+        <div className="absolute inset-0 bg-[#0A1628]/80" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0A1628] via-[#0A1628]/40 to-transparent" />
       </div>
 
       {/* Red accent bar */}
@@ -41,11 +42,11 @@ export default function Hero() {
             <br />Specialist
           </h1>
 
-          <p className="text-xl sm:text-2xl text-white/70 font-medium mb-4 max-w-2xl mx-auto">
+          <p className="text-xl sm:text-2xl text-white/80 font-medium mb-4 max-w-2xl mx-auto">
             When other mechanics can&apos;t figure it out, they call us.
           </p>
 
-          <p className="text-base text-white/50 mb-10 max-w-xl mx-auto">
+          <p className="text-base text-white/60 mb-10 max-w-xl mx-auto">
             18 years at this location · 4.7 stars · 100+ reviews · Japanese & domestic vehicles
           </p>
 
@@ -59,13 +60,13 @@ export default function Hero() {
               Book &amp; Pre-Pay Diagnostic
             </Button>
             <Button
-              render={<a href="tel:+1XXXXXXXXXX" />}
+              render={<a href="tel:+16783100267" />}
               size="lg"
               variant="outline"
-              className="border-white/30 text-white hover:bg-white/10 hover:border-white/60 font-bold text-base px-8 py-4 h-auto bg-transparent flex items-center gap-2"
+              className="border-white/40 text-white hover:bg-white/10 hover:border-white/70 font-bold text-base px-8 py-4 h-auto bg-transparent flex items-center gap-2"
             >
               <Phone className="w-5 h-5" />
-              Call Now: (XXX) XXX-XXXX
+              Call Now: (678) 310-0267
             </Button>
           </div>
 

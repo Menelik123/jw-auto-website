@@ -4,6 +4,7 @@ import DiagnosticFee from "@/components/DiagnosticFee";
 import ServiceCard from "@/components/ServiceCard";
 import ReviewCard from "@/components/ReviewCard";
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Zap, Snowflake, Settings, Wrench, ArrowRight } from "lucide-react";
 
@@ -122,19 +123,28 @@ export default function HomePage() {
                 Read Our Story <ArrowRight className="w-4 h-4" />
               </Button>
             </div>
-            <div className="bg-[#0A1628] rounded-2xl p-8 text-white">
-              <div className="grid grid-cols-2 gap-6">
-                {[
-                  { value: "35+", label: "Years at this location" },
-                  { value: "4.7★", label: "Google rating" },
-                  { value: "100+", label: "Verified reviews" },
-                  { value: "$150", label: "Flat diagnostic fee" },
-                ].map((stat) => (
-                  <div key={stat.label} className="text-center">
-                    <div className="text-4xl font-black text-[#C8102E] mb-1">{stat.value}</div>
-                    <div className="text-white/60 text-sm">{stat.label}</div>
-                  </div>
-                ))}
+            <div className="relative rounded-2xl overflow-hidden shadow-xl h-80 lg:h-auto">
+              <Image
+                src="/images/john-working-2.jpg"
+                alt="John Wanarski diagnosing a vehicle at JW Auto Service"
+                fill
+                className="object-cover object-top"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0A1628]/80 to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4">
+                <div className="grid grid-cols-2 gap-3">
+                  {[
+                    { value: "35+", label: "Years at this location" },
+                    { value: "4.7★", label: "Google rating" },
+                    { value: "100+", label: "Verified reviews" },
+                    { value: "$150", label: "Flat diagnostic fee" },
+                  ].map((stat) => (
+                    <div key={stat.label} className="bg-[#0A1628]/80 backdrop-blur-sm rounded-lg p-3 text-center border border-white/10">
+                      <div className="text-2xl font-black text-[#C8102E]">{stat.value}</div>
+                      <div className="text-white/70 text-xs">{stat.label}</div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -175,8 +185,8 @@ export default function HomePage() {
             <Button render={<Link href="/book" />} size="lg" className="bg-white text-[#C8102E] hover:bg-gray-100 font-bold text-base px-10 py-4 h-auto">
               Book &amp; Pre-Pay Now
             </Button>
-            <Button render={<a href="tel:+1XXXXXXXXXX" />} size="lg" variant="outline" className="border-white text-white hover:bg-white/10 font-bold text-base px-10 py-4 h-auto bg-transparent">
-              Call (XXX) XXX-XXXX
+            <Button render={<a href="tel:+16783100267" />} size="lg" variant="outline" className="border-white text-white hover:bg-white/10 font-bold text-base px-10 py-4 h-auto bg-transparent">
+              Call (678) 310-0267
             </Button>
           </div>
         </div>

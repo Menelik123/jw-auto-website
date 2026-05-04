@@ -57,8 +57,8 @@ export default function ContactPage() {
                 </div>
                 <h3 className="font-bold text-[#0A1628]">Phone</h3>
               </div>
-              <a href="tel:+1XXXXXXXXXX" className="text-2xl font-black text-[#0A1628] hover:text-[#C8102E] transition-colors block mb-1">
-                (XXX) XXX-XXXX
+              <a href="tel:+16783100267" className="text-2xl font-black text-[#0A1628] hover:text-[#C8102E] transition-colors block mb-1">
+                (678) 310-0267
               </a>
               <p className="text-gray-500 text-sm">Mon–Fri · 8AM–5PM · Ask for Danielle</p>
               <div className="mt-3 text-[#C8102E] text-sm font-semibold">Hablamos español</div>
@@ -77,8 +77,8 @@ export default function ContactPage() {
                 </div>
                 <h3 className="font-bold text-[#0A1628]">Location</h3>
               </div>
-              <div className="text-[#0A1628] font-semibold mb-1">[Full Address Placeholder]</div>
-              <div className="text-gray-600 text-sm">Mableton, Georgia 30126</div>
+              <div className="text-[#0A1628] font-semibold mb-1">1480 Veterans Memorial Hwy SW</div>
+              <div className="text-gray-600 text-sm">Suite 100 · Mableton, GA 30126</div>
               <div className="text-gray-400 text-xs mt-1">Cobb County</div>
               <div className="mt-3 bg-blue-50 border border-blue-200 rounded-lg p-3">
                 <div className="text-blue-700 text-xs font-medium">Service Radius</div>

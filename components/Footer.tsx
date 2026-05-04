@@ -77,8 +77,8 @@ export default function Footer() {
                 <Phone className="w-4 h-4 text-[#C8102E] mt-0.5 shrink-0" />
                 <div>
                   <div className="text-white/60 text-xs">Call or Text</div>
-                  <a href="tel:+1XXXXXXXXXX" className="text-white hover:text-[#C8102E] font-medium transition-colors">
-                    (XXX) XXX-XXXX
+                  <a href="tel:+16783100267" className="text-white hover:text-[#C8102E] font-medium transition-colors">
+                    (678) 310-0267
                   </a>
                 </div>
               </div>
@@ -86,8 +86,8 @@ export default function Footer() {
                 <MapPin className="w-4 h-4 text-[#C8102E] mt-0.5 shrink-0" />
                 <div>
                   <div className="text-white/60 text-xs">Location</div>
-                  <div className="text-white">Mableton, Georgia</div>
-                  <div className="text-white/60 text-xs">Cobb County</div>
+                  <div className="text-white">1480 Veterans Memorial Hwy SW</div>
+                  <div className="text-white/60 text-xs">Suite 100 · Mableton, GA 30126</div>
                 </div>
               </div>
               <div className="mt-4 bg-[#C8102E]/20 border border-[#C8102E]/30 rounded p-3">

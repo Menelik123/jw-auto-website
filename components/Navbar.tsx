@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
-import { Menu, Wrench } from "lucide-react";
+import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -27,11 +28,15 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-9 h-9 bg-[#C8102E] rounded flex items-center justify-center">
-              <Wrench className="w-5 h-5 text-white" />
-            </div>
+            <Image
+              src="/images/logo-circle.png"
+              alt="JW Auto Service"
+              width={44}
+              height={44}
+              className="rounded-full bg-white"
+            />
             <div className="flex flex-col leading-none">
-              <span className="text-white font-bold text-lg tracking-wide">JW AUTO</span>
+              <span className="text-white font-bold text-lg tracking-wide">JW AUTO SERVICE</span>
               <span className="text-white/50 text-xs tracking-widest uppercase">Mableton, GA</span>
             </div>
           </Link>
@@ -65,10 +70,14 @@ export default function Navbar() {
               <SheetContent side="right" className="bg-[#0A1628] border-white/10 w-[280px]">
                 <div className="flex flex-col gap-6 pt-8">
                   <Link href="/" className="flex items-center gap-2 mb-4">
-                    <div className="w-9 h-9 bg-[#C8102E] rounded flex items-center justify-center">
-                      <Wrench className="w-5 h-5 text-white" />
-                    </div>
-                    <span className="text-white font-bold text-lg">JW AUTO</span>
+                    <Image
+                      src="/images/logo-circle.png"
+                      alt="JW Auto Service"
+                      width={40}
+                      height={40}
+                      className="rounded-full bg-white"
+                    />
+                    <span className="text-white font-bold text-lg">JW AUTO SERVICE</span>
                   </Link>
                   {navLinks.map((link) => (
                     <Link

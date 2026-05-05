@@ -85,15 +85,15 @@ export default function AboutPage() {
                   John didn&apos;t just inherit a location — he inherited a standard. He&apos;s continued and expanded the shop&apos;s reputation, adding complex electrical diagnostics to the specialty work and turning JW Auto Service into the shop that other mechanics in Cobb County call when they&apos;re stuck.
                 </p>
                 <p>
-                  In 18 years at the helm, John has built a Google rating of 4.7 stars with over 100 reviews — nearly all of them unprompted, from customers who came in skeptical and left believers.
+                  In 18 years at the helm, John has built a Google rating of 4.8 stars with 89 reviews — nearly all of them unprompted, from customers who came in skeptical and left believers.
                 </p>
               </div>
               <div className="grid grid-cols-2 gap-4 mt-8">
                 {[
                   { value: "2008", label: "John took over" },
                   { value: "35+", label: "Years, this location" },
-                  { value: "4.7★", label: "Google rating" },
-                  { value: "100+", label: "Verified reviews" },
+                  { value: "4.8★", label: "Google rating" },
+                  { value: "89", label: "Verified reviews" },
                 ].map((stat) => (
                   <div key={stat.label} className="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center">
                     <div className="text-3xl font-black text-[#C8102E] mb-1">{stat.value}</div>

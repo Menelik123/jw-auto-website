@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { Phone, MapPin, Clock, Mail, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
@@ -113,13 +114,34 @@ export default function ContactPage() {
 
           {/* Map + Form */}
           <div className="lg:col-span-2 space-y-8">
-            {/* Map Placeholder */}
+            {/* Office Photo */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
+              className="relative rounded-2xl overflow-hidden shadow-sm"
+              style={{ height: "280px" }}
+            >
+              <Image
+                src="/images/office-waiting.jpg"
+                alt="JW Auto Service waiting room and front office"
+                fill
+                className="object-cover object-top"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0A1628]/70 to-transparent" />
+              <div className="absolute bottom-4 left-4">
+                <div className="text-white font-semibold text-sm">JW Auto Service — Mableton, GA</div>
+                <div className="text-white/60 text-xs">1480 Veterans Memorial Hwy SW, Suite 100</div>
+              </div>
+            </motion.div>
+
+            {/* Map Placeholder */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
               className="bg-white border-2 border-dashed border-gray-300 rounded-2xl overflow-hidden"
-              style={{ height: "300px" }}
+              style={{ height: "260px" }}
             >
               <div className="w-full h-full flex flex-col items-center justify-center gap-3 bg-gray-100">
                 <MapPin className="w-12 h-12 text-gray-300" />

@@ -7,40 +7,40 @@ import ReviewCard from "@/components/ReviewCard";
 
 const reviews = [
   {
-    name: "Marcus T.",
+    name: "Hillary Jones",
     rating: 5,
-    date: "March 2024",
-    text: "John figured out an electrical gremlin that two other shops couldn't identify in three weeks. Had it diagnosed in a day, fixed by the next morning. The $150 diagnostic fee is worth every penny — I spent $800 at another shop on the wrong fix before coming here.",
+    date: "7 months ago",
+    text: "I have not had the best experience with auto mechanics in general, so I was very nervous about my car. From the very beginning, Danielle was extremely professional and very thorough about explaining the process. John was fantastic in fixing my 2016 Honda. The car was ready in 6 hours. I will definitely be returning and referring family and friends.",
   },
   {
-    name: "Sandra R.",
+    name: "James Maddox",
     rating: 5,
-    date: "January 2024",
-    text: "My AC stopped working in the middle of July — worst timing imaginable. JW Auto had it diagnosed and recharged the same week. Been blowing ice cold ever since. I've referred three people here already.",
+    date: "3 months ago",
+    text: "My go-to mechanic. Danielle and John have been super for me and my family for many years. Never a problem!",
   },
   {
-    name: "Derek F.",
+    name: "Aleesha Edwards-Williams",
     rating: 5,
-    date: "November 2023",
-    text: "My own mechanic referred me here when he couldn't solve a no-start issue on my Tacoma. John found the problem in two hours. Straight shooter, no nonsense. Exactly the kind of shop I was looking for.",
+    date: "2 years ago",
+    text: "Truly the best auto mechanics I've ever been to. Highly recommend!",
   },
   {
-    name: "Patricia M.",
+    name: "Joseph Davenport",
     rating: 5,
-    date: "September 2023",
-    text: "Been bringing my Honda Accord here for three years now. Never once felt upsold on something I didn't need. John tells it to you straight, does the work right, and the price is fair. That's rare.",
+    date: "10 months ago",
+    text: "Very friendly and professional. When I had issues I was not sure about they thoroughly explained what happened, why it happened, and what they did to fix it. I will definitely be checking with them before I go to any other auto repair shop.",
   },
   {
-    name: "Terrence B.",
+    name: "Bo Smith",
     rating: 5,
-    date: "July 2023",
-    text: "Brought my F-150 in for an electrical issue that had been annoying me for months. Three other shops couldn't figure it out. JW Auto solved it in one visit. Highly recommend.",
+    date: "a year ago",
+    text: "I had an issue with my car and they got me in same day for a diagnostic and fixed it the following morning. They stayed in communication with me the whole time about what they found and the cost. The diagnostic fee was applied to the overall cost of the repair. Highly recommend.",
   },
   {
-    name: "Carmen V.",
-    rating: 4,
-    date: "May 2023",
-    text: "Very professional and honest. The $150 diagnostic fee seemed high at first but they explained everything clearly and the diagnosis was thorough. Ended up saving me money in the long run. They also speak Spanish which made communication much easier.",
+    name: "Demetrius Cook",
+    rating: 5,
+    date: "a year ago",
+    text: "John at JW Auto was fantastic! They did a wonderful job on my 2012 Audi. I will be sending family and friends their way.",
   },
 ];
 
@@ -60,8 +60,8 @@ export default function ReviewsPage() {
                 <Star key={i} className={`w-8 h-8 ${i < 5 ? "fill-yellow-400 text-yellow-400" : "fill-gray-600 text-gray-600"}`} />
               ))}
             </div>
-            <div className="text-6xl font-black text-white mb-2">4.7</div>
-            <div className="text-white/60 text-lg mb-6">100+ reviews on Google · Mableton, Georgia</div>
+            <div className="text-6xl font-black text-white mb-2">4.8</div>
+            <div className="text-white/60 text-lg mb-6">89 reviews on Google · Mableton, Georgia</div>
             <h1 className="text-3xl sm:text-4xl font-extrabold text-white">
               What Our Customers Say
             </h1>
@@ -77,6 +77,31 @@ export default function ReviewsPage() {
           ))}
         </div>
 
+        {/* Live Google Reviews Widget */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mb-10"
+        >
+          <div className="text-center mb-6">
+            <h2 className="text-2xl font-bold text-[#0A1628] mb-2">Live Reviews from Google</h2>
+            <p className="text-gray-500 text-sm">Auto-updating widget pulls directly from our Google Business Profile</p>
+          </div>
+          {/* Elfsight Google Reviews Widget — replace data-elfsight-app-id with your real widget ID */}
+          <div className="bg-white border-2 border-dashed border-gray-200 rounded-2xl p-10 text-center">
+            <Star className="w-10 h-10 text-yellow-400 mx-auto mb-3" />
+            <div className="font-bold text-gray-500 text-lg mb-1">Google Reviews Widget</div>
+            <div className="text-gray-400 text-sm max-w-sm mx-auto mb-4">
+              Elfsight or EmbedSocial widget goes here — live-updating reviews straight from Google.
+            </div>
+            <div className="bg-gray-50 border border-gray-200 rounded-lg px-4 py-2 inline-block">
+              <code className="text-xs text-gray-400">{'<script src="https://static.elfsight.com/platform/platform.js"></script>'}</code>
+            </div>
+          </div>
+        </motion.div>
+
         {/* Google CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -86,7 +111,7 @@ export default function ReviewsPage() {
           className="bg-white border border-gray-200 rounded-2xl p-8 sm:p-12 text-center shadow-sm mb-10"
         >
           <h2 className="text-2xl font-bold text-[#0A1628] mb-2">Read All Reviews on Google</h2>
-          <p className="text-gray-600 mb-6">100+ verified Google reviews from real JW Auto customers in Mableton, GA.</p>
+          <p className="text-gray-600 mb-6">89 verified Google reviews from real JW Auto customers in Mableton, GA.</p>
           <Button render={<a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" />} className="bg-[#0A1628] hover:bg-[#1a2a42] text-white font-semibold px-8 flex items-center gap-2">
             View on Google Maps <ExternalLink className="w-4 h-4" />
           </Button>

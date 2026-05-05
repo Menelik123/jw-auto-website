@@ -41,22 +41,22 @@ const services = [
 
 const reviews = [
   {
-    name: "Marcus T.",
+    name: "Hillary Jones",
     rating: 5,
-    date: "March 2024",
-    text: "John figured out an electrical gremlin that two other shops couldn't identify in three weeks. Had it diagnosed in a day, fixed by the next morning. The $150 diagnostic fee is worth every penny.",
+    date: "7 months ago",
+    text: "From the very beginning, Danielle was extremely professional and very thorough about explaining the process. John was fantastic in fixing my 2016 Honda. The car was ready in 6 hours. I will definitely be returning and referring family and friends.",
   },
   {
-    name: "Sandra R.",
+    name: "Bo Smith",
     rating: 5,
-    date: "January 2024",
-    text: "My AC stopped working in July — worst timing. JW Auto had it diagnosed and recharged same week. Been blowing ice cold ever since. This is my shop now.",
+    date: "a year ago",
+    text: "They got me in same day for a diagnostic and fixed it the following morning. They stayed in communication with me the whole time about what they found and the cost. The diagnostic fee was applied to the overall cost of the repair. Highly recommend.",
   },
   {
-    name: "Derek F.",
+    name: "Joseph Davenport",
     rating: 5,
-    date: "November 2023",
-    text: "My mechanic actually referred me here when he couldn't solve a no-start issue on my Tacoma. John found the problem in two hours. Straight shooter, no nonsense.",
+    date: "10 months ago",
+    text: "Very friendly and professional. When I had issues I was not sure about they thoroughly explained what happened, why it happened, and what they did to fix it. I will definitely be checking with them before I go to any other auto repair shop.",
   },
 ];
 
@@ -135,8 +135,8 @@ export default function HomePage() {
                 <div className="grid grid-cols-2 gap-3">
                   {[
                     { value: "35+", label: "Years at this location" },
-                    { value: "4.7★", label: "Google rating" },
-                    { value: "100+", label: "Verified reviews" },
+                    { value: "4.8★", label: "Google rating" },
+                    { value: "89", label: "Verified reviews" },
                     { value: "$150", label: "Flat diagnostic fee" },
                   ].map((stat) => (
                     <div key={stat.label} className="bg-[#0A1628]/80 backdrop-blur-sm rounded-lg p-3 text-center border border-white/10">
@@ -155,9 +155,9 @@ export default function HomePage() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <div className="text-4xl font-black text-yellow-400 mb-2">★ 4.7</div>
+            <div className="text-4xl font-black text-yellow-400 mb-2">★ 4.8</div>
             <h2 className="text-3xl sm:text-4xl font-bold text-[#0A1628] mb-2">What Our Customers Say</h2>
-            <p className="text-gray-500">100+ reviews on Google · Mableton, Georgia</p>
+            <p className="text-gray-500">89 reviews on Google · Mableton, Georgia</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             {reviews.map((r, i) => (

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { Snowflake, Zap, Settings, Wrench, AlertTriangle, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -173,6 +174,16 @@ export default function ServicesPage() {
                     </Button>
                   </div>
                   <div>
+                    {service.featured && (
+                      <div className="relative rounded-xl overflow-hidden mb-6 h-56">
+                        <Image
+                          src="/images/john-ac-hood.jpg"
+                          alt="John Wanarski inspecting AC system with hood open"
+                          fill
+                          className="object-cover object-center"
+                        />
+                      </div>
+                    )}
                     <div className={`text-xs font-bold tracking-widest uppercase mb-4 ${service.featured ? "text-white/50" : "text-gray-400"}`}>
                       What&apos;s Included
                     </div>

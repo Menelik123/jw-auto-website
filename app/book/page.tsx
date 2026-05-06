@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Script from "next/script";
 import { Calendar, CreditCard, Clock, Phone, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -78,29 +79,50 @@ export default function BookPage() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Main booking area */}
           <div className="lg:col-span-2 space-y-8">
-            {/* Cal.com Placeholder */}
-            <div className="bg-white border-2 border-dashed border-gray-300 rounded-2xl p-12 text-center">
-              <Calendar className="w-12 h-12 text-gray-300 mx-auto mb-4" />
-              <h3 className="font-bold text-gray-500 text-xl mb-2">Scheduling Widget</h3>
-              <p className="text-gray-400 text-sm max-w-sm mx-auto">
-                Cal.com embed will go here. Customers will be able to select available dates and times directly.
-              </p>
-              <div className="mt-4 bg-gray-50 border border-gray-200 rounded-lg px-4 py-2 inline-block">
-                <code className="text-xs text-gray-500">{'<Cal.com embed />'}</code>
-              </div>
+            {/* Cal.com Embed */}
+            <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm">
+              <div style={{ width: "100%", height: "700px", overflow: "scroll" }} id="my-cal-inline-diagnostic-appointment" />
+              <Script
+                id="cal-embed"
+                strategy="afterInteractive"
+                dangerouslySetInnerHTML={{
+                  __html: `(function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+Cal("init", "diagnostic-appointment", {origin:"https://app.cal.com"});
+Cal.ns["diagnostic-appointment"]("inline", {
+  elementOrSelector:"#my-cal-inline-diagnostic-appointment",
+  config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true"},
+  calLink: "jw-auto-gal8qd/diagnostic-appointment",
+});
+Cal.ns["diagnostic-appointment"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});`,
+                }}
+              />
             </div>
 
-            {/* Stripe Placeholder */}
-            <div className="bg-white border-2 border-dashed border-gray-300 rounded-2xl p-12 text-center">
-              <CreditCard className="w-12 h-12 text-gray-300 mx-auto mb-4" />
-              <h3 className="font-bold text-gray-500 text-xl mb-2">Payment — $150.00</h3>
-              <p className="text-gray-400 text-sm max-w-sm mx-auto mb-6">
-                Stripe payment link will go here. Secure pre-payment of the $150 diagnostic fee confirms your appointment.
-              </p>
-              <Button disabled className="bg-[#C8102E] text-white font-bold px-8 opacity-50 cursor-not-allowed">
+            {/* Stripe Payment */}
+            <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-[#C8102E]/10 border border-[#C8102E]/30 rounded-lg flex items-center justify-center">
+                  <CreditCard className="w-5 h-5 text-[#C8102E]" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-[#0A1628]">Pre-Pay Diagnostic Fee</h3>
+                  <p className="text-gray-500 text-sm">Confirms your appointment slot</p>
+                </div>
+              </div>
+              <div className="bg-gray-50 border border-gray-200 rounded-xl p-6 mb-6">
+                <div className="flex justify-between items-center mb-2">
+                  <span className="text-gray-700 font-medium">Diagnostic Fee</span>
+                  <span className="text-2xl font-black text-[#0A1628]">$150.00</span>
+                </div>
+                <p className="text-gray-500 text-xs">Applied toward your repair if you proceed with us</p>
+              </div>
+              <Button
+                render={<a href="STRIPE_PAYMENT_LINK" target="_blank" rel="noopener noreferrer" />}
+                className="w-full bg-[#C8102E] hover:bg-[#a00d24] text-white font-bold py-4 h-auto text-base"
+              >
                 Pay $150.00 — Confirm Appointment
               </Button>
-              <p className="text-gray-400 text-xs mt-3">Stripe · Secure · No card stored</p>
+              <p className="text-gray-400 text-xs text-center mt-3">Secured by Stripe · No card stored after payment</p>
             </div>
           </div>
 

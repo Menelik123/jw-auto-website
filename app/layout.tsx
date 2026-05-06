@@ -18,6 +18,10 @@ export const metadata: Metadata = {
   title: "JW Auto — Mableton's AC & Electrical Specialist",
   description:
     "Expert AC repair and complex electrical diagnostics in Mableton, Georgia. In business since 2008. Trusted by other mechanics. Japanese & domestic vehicles only.",
+  icons: {
+    icon: "/images/logo-circle.png",
+    apple: "/images/logo-circle.png",
+  },
 };
 
 export default function RootLayout({

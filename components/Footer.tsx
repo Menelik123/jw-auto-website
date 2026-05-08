@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Wrench, Phone, MapPin, Clock } from "lucide-react";
+import Image from "next/image";
+import { Phone, MapPin, Clock } from "lucide-react";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -17,24 +18,30 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-[#C8102E] rounded flex items-center justify-center">
-                <Wrench className="w-6 h-6 text-white" />
-              </div>
+            <Link href="/" className="flex items-center gap-3 mb-4">
+              <Image
+                src="/images/logo-circle.png"
+                alt="JW Auto Service"
+                width={44}
+                height={44}
+                className="rounded-full bg-white"
+              />
               <div>
-                <div className="font-bold text-xl">JW AUTO</div>
+                <div className="font-bold text-xl">JW AUTO SERVICE</div>
                 <div className="text-white/50 text-xs tracking-widest uppercase">Mableton, GA</div>
               </div>
             </Link>
             <p className="text-white/60 text-sm leading-relaxed mt-4">
               Mableton&apos;s trusted AC and electrical specialist since 2008. When other shops can&apos;t figure it out, they call us.
             </p>
-            <div className="flex gap-3 mt-6">
-              <a href="#" aria-label="Facebook" className="w-9 h-9 bg-white/10 hover:bg-[#C8102E] rounded flex items-center justify-center transition-colors text-white text-xs font-bold">
-                f
-              </a>
-              <a href="#" aria-label="Instagram" className="w-9 h-9 bg-white/10 hover:bg-[#C8102E] rounded flex items-center justify-center transition-colors text-white text-xs font-bold">
-                ig
+            <div className="mt-6">
+              <a
+                href="https://www.google.com/maps/search/JW+Auto+Service+Mableton+GA"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-white/60 hover:text-white text-sm transition-colors"
+              >
+                ★ 4.8 on Google · 89 Reviews
               </a>
             </div>
           </div>

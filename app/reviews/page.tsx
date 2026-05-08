@@ -77,32 +77,7 @@ export default function ReviewsPage() {
           ))}
         </div>
 
-        {/* Live Google Reviews Widget */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mb-10"
-        >
-          <div className="text-center mb-6">
-            <h2 className="text-2xl font-bold text-[#0A1628] mb-2">Live Reviews from Google</h2>
-            <p className="text-gray-500 text-sm">Auto-updating widget pulls directly from our Google Business Profile</p>
-          </div>
-          {/* Elfsight Google Reviews Widget — replace data-elfsight-app-id with your real widget ID */}
-          <div className="bg-white border-2 border-dashed border-gray-200 rounded-2xl p-10 text-center">
-            <Star className="w-10 h-10 text-yellow-400 mx-auto mb-3" />
-            <div className="font-bold text-gray-500 text-lg mb-1">Google Reviews Widget</div>
-            <div className="text-gray-400 text-sm max-w-sm mx-auto mb-4">
-              Elfsight or EmbedSocial widget goes here — live-updating reviews straight from Google.
-            </div>
-            <div className="bg-gray-50 border border-gray-200 rounded-lg px-4 py-2 inline-block">
-              <code className="text-xs text-gray-400">{'<script src="https://static.elfsight.com/platform/platform.js"></script>'}</code>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Leave a Review CTA */}
+{/* Leave a Review CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

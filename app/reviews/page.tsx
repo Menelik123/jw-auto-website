@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Star, ExternalLink, QrCode } from "lucide-react";
+import { Star, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ReviewCard from "@/components/ReviewCard";
 
@@ -102,45 +102,21 @@ export default function ReviewsPage() {
           </div>
         </motion.div>
 
-        {/* Google CTA */}
+        {/* Leave a Review CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="bg-white border border-gray-200 rounded-2xl p-8 sm:p-12 text-center shadow-sm mb-10"
+          className="bg-[#0A1628] rounded-2xl p-8 sm:p-12 text-center"
         >
-          <h2 className="text-2xl font-bold text-[#0A1628] mb-2">Read All Reviews on Google</h2>
-          <p className="text-gray-600 mb-6">89 verified Google reviews from real JW Auto customers in Mableton, GA.</p>
-          <Button render={<a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" />} className="bg-[#0A1628] hover:bg-[#1a2a42] text-white font-semibold px-8 flex items-center gap-2">
-            View on Google Maps <ExternalLink className="w-4 h-4" />
+          <h2 className="text-2xl font-bold text-white mb-3">Happy With Your Service?</h2>
+          <p className="text-white/60 mb-6 max-w-lg mx-auto">
+            Your review helps other Mableton drivers find honest, expert repair. It takes 60 seconds and means a lot to our team.
+          </p>
+          <Button render={<a href="https://www.google.com/maps/search/JW+Auto+Service+Mableton+GA" target="_blank" rel="noopener noreferrer" />} className="bg-[#C8102E] hover:bg-[#a00d24] text-white font-bold px-8 py-3 h-auto flex items-center gap-2">
+            Leave a Google Review <ExternalLink className="w-4 h-4" />
           </Button>
-        </motion.div>
-
-        {/* QR Code / Leave a Review */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="bg-[#0A1628] rounded-2xl p-8 sm:p-12 flex flex-col sm:flex-row items-center gap-8"
-        >
-          <div className="w-40 h-40 bg-white rounded-xl flex items-center justify-center shrink-0">
-            <div className="text-center">
-              <QrCode className="w-16 h-16 text-[#0A1628] mx-auto mb-2" />
-              <span className="text-xs text-gray-500 font-medium">QR Code</span>
-              <span className="block text-xs text-gray-400">Placeholder</span>
-            </div>
-          </div>
-          <div>
-            <h2 className="text-2xl font-bold text-white mb-3">Happy With Your Service?</h2>
-            <p className="text-white/60 mb-6">
-              Scan the QR code or click below to leave a review on Google. Your feedback helps other Mableton drivers find honest, expert repair.
-            </p>
-            <Button render={<a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" />} className="bg-[#C8102E] hover:bg-[#a00d24] text-white font-semibold flex items-center gap-2">
-              Leave a Google Review <ExternalLink className="w-4 h-4" />
-            </Button>
-          </div>
         </motion.div>
       </div>
     </div>

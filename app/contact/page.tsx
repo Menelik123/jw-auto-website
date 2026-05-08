@@ -135,24 +135,24 @@ export default function ContactPage() {
               </div>
             </motion.div>
 
-            {/* Map Placeholder */}
+            {/* Google Maps Embed */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="bg-white border-2 border-dashed border-gray-300 rounded-2xl overflow-hidden"
+              className="rounded-2xl overflow-hidden shadow-sm"
               style={{ height: "260px" }}
             >
-              <div className="w-full h-full flex flex-col items-center justify-center gap-3 bg-gray-100">
-                <MapPin className="w-12 h-12 text-gray-300" />
-                <div className="text-center">
-                  <div className="font-semibold text-gray-400">Google Maps Embed</div>
-                  <div className="text-gray-400 text-sm">Mableton, Georgia · JW Auto</div>
-                </div>
-                <div className="bg-gray-50 border border-gray-200 rounded-lg px-4 py-2">
-                  <code className="text-xs text-gray-400">{'<iframe src="google.com/maps/embed/..." />'}</code>
-                </div>
-              </div>
+              <iframe
+                src="https://www.google.com/maps?q=1480+Veterans+Memorial+Hwy+SW,+Mableton,+GA+30126&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="JW Auto Service location"
+              />
             </motion.div>
 
             {/* Contact Form */}

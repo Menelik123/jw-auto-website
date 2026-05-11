@@ -156,7 +156,7 @@ export default function HomePage() {
               <div className="absolute bottom-4 left-4 right-4">
                 <div className="grid grid-cols-2 gap-3">
                   {[
-                    { value: "35+", label: "Years at this location" },
+                    { value: "35+", label: "Years in the industry" },
                     { value: "4.8★", label: "Google rating" },
                     { value: "89", label: "Verified reviews" },
                     { value: "$150", label: "Flat diagnostic fee" },

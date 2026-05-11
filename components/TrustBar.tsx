@@ -6,8 +6,8 @@ import { Building2, Star, Users, Shield, Car, Clock } from "lucide-react";
 const items = [
   {
     icon: Building2,
-    label: "35+ Years at This Location",
-    sub: "Mableton's longest-running AC shop",
+    label: "35+ Years in the Industry",
+    sub: "Mableton's most experienced AC shop",
   },
   {
     icon: Star,

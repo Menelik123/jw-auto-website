@@ -47,7 +47,7 @@ export default function Hero() {
           </p>
 
           <p className="text-base text-white/60 mb-10 max-w-xl mx-auto">
-            35+ years at this location · 4.8 stars · 89 reviews · Japanese & domestic vehicles
+            35+ years in the industry · 4.8 stars · 89 reviews · Japanese & domestic vehicles
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

@@ -59,7 +59,7 @@ export default function AboutPage() {
               <span className="text-[#C8102E]">Mechanics Trust</span>
             </h1>
             <p className="text-white/60 text-xl max-w-2xl">
-              This isn&apos;t a franchise. It&apos;s a shop with 35+ years of AC history in one location and a reputation built on solving the problems other shops can&apos;t.
+              This isn&apos;t a franchise. It&apos;s a shop with 35+ years of AC expertise and a reputation built on solving the problems other shops can&apos;t.
             </p>
           </motion.div>
         </div>

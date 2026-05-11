@@ -65,7 +65,7 @@ export default function DiagnosticFee() {
             </div>
 
             <p className="text-white/40 text-sm mb-6">
-              The $150 fee is non-negotiable and required at booking. It applies toward your repair if you proceed with us.
+              The $150 fee is non-negotiable and required at booking.
             </p>
             <Button
               render={<Link href="/book" />}

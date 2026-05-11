@@ -46,7 +46,6 @@ export default function BookPage() {
             </h1>
             <p className="text-white/60 text-lg max-w-2xl mx-auto">
               The $150 diagnostic fee is required at booking. Pre-payment confirms your appointment.
-              It applies toward your repair if you proceed with us.
             </p>
           </motion.div>
         </div>
@@ -114,7 +113,7 @@ Cal.ns["diagnostic-appointment"]("ui", {"hideEventTypeDetails":false,"layout":"m
                   <span className="text-gray-700 font-medium">Diagnostic Fee</span>
                   <span className="text-2xl font-black text-[#0A1628]">$150.00</span>
                 </div>
-                <p className="text-gray-500 text-xs">Applied toward your repair if you proceed with us</p>
+                <p className="text-gray-500 text-xs">Non-refundable · Covers full diagnostic, not a code read</p>
               </div>
               <Button
                 render={<a href="STRIPE_PAYMENT_LINK" target="_blank" rel="noopener noreferrer" />}
@@ -187,7 +186,7 @@ Cal.ns["diagnostic-appointment"]("ui", {"hideEventTypeDetails":false,"layout":"m
               <h3 className="font-black text-xl mb-2">$150 Fee Policy</h3>
               <ul className="space-y-2 text-sm text-white/80">
                 <li>• Required at booking — no exceptions</li>
-                <li>• Applies toward repair if you proceed</li>
+                <li>• Non-refundable</li>
                 <li>• Covers complete diagnostic, not a code read</li>
                 <li>• Written diagnosis provided</li>
               </ul>

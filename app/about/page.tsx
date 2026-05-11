@@ -140,7 +140,7 @@ export default function AboutPage() {
                   Our $150 fee covers a real diagnostic: component testing under real conditions, full system inspection, and a written explanation of exactly what&apos;s wrong and why. It&apos;s what makes our repairs correct the first time.
                 </p>
                 <p>
-                  The fee applies toward your repair if you proceed with us. If you decide not to, you still have a document that tells you exactly what&apos;s wrong — which is worth far more than $150 in avoided wrong repairs.
+                  If you decide not to proceed with us, you still leave with a written document that tells you exactly what&apos;s wrong and why — which is worth far more than $150 in avoided wrong repairs at other shops.
                 </p>
               </div>
             </div>

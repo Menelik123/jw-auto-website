@@ -81,10 +81,6 @@ export default function ContactPage() {
               <div className="text-[#0A1628] font-semibold mb-1">1480 Veterans Memorial Hwy SW</div>
               <div className="text-gray-600 text-sm">Suite 100 · Mableton, GA 30126</div>
               <div className="text-gray-400 text-xs mt-1">Cobb County</div>
-              <div className="mt-3 bg-blue-50 border border-blue-200 rounded-lg p-3">
-                <div className="text-blue-700 text-xs font-medium">Service Radius</div>
-                <div className="text-blue-600 text-sm">Serving Cobb County and surrounding 10–15 miles</div>
-              </div>
             </motion.div>
 
             {/* Hours */}

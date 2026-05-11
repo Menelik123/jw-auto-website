@@ -64,6 +64,28 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+
+      {/* Reviews */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <div className="text-4xl font-black text-yellow-400 mb-2">★ 4.8</div>
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#0A1628] mb-2">What Our Customers Say</h2>
+            <p className="text-gray-500">89 reviews on Google · Mableton, Georgia</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            {reviews.map((r, i) => (
+              <ReviewCard key={r.name} {...r} delay={i * 0.1} />
+            ))}
+          </div>
+          <div className="text-center">
+            <Button render={<Link href="/reviews" />} variant="outline" className="border-[#0A1628] text-[#0A1628] hover:bg-[#0A1628] hover:text-white font-semibold flex items-center gap-2">
+              See All Reviews <ArrowRight className="w-4 h-4" />
+            </Button>
+          </div>
+        </div>
+      </section>
+
       <TrustBar />
 
       {/* Services Preview */}
@@ -147,27 +169,6 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Reviews */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <div className="text-4xl font-black text-yellow-400 mb-2">★ 4.8</div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#0A1628] mb-2">What Our Customers Say</h2>
-            <p className="text-gray-500">89 reviews on Google · Mableton, Georgia</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            {reviews.map((r, i) => (
-              <ReviewCard key={r.name} {...r} delay={i * 0.1} />
-            ))}
-          </div>
-          <div className="text-center">
-            <Button render={<Link href="/reviews" />} variant="outline" className="border-[#0A1628] text-[#0A1628] hover:bg-[#0A1628] hover:text-white font-semibold flex items-center gap-2">
-              See All Reviews <ArrowRight className="w-4 h-4" />
-            </Button>
           </div>
         </div>
       </section>

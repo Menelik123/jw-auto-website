@@ -2,28 +2,27 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import Script from "next/script";
-import { Calendar, CreditCard, Clock, Phone, CheckCircle } from "lucide-react";
+import { CreditCard, Clock, Phone, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const steps = [
   {
     step: "01",
-    icon: Calendar,
-    title: "Choose Your Date & Time",
-    description: "Select an available slot from our calendar. Monday–Friday, 8AM–5PM. Vehicle pickup by 4:30PM.",
+    icon: Phone,
+    title: "Call Us to Schedule",
+    description: "Call (678) 663-2455 during business hours. Danielle will walk you through the process and lock in your appointment.",
   },
   {
     step: "02",
-    icon: CreditCard,
-    title: "Pre-Pay the $150 Diagnostic Fee",
-    description: "Secure your appointment by pre-paying the flat $150 diagnostic fee. This confirms your booking.",
+    icon: CheckCircle,
+    title: "Get Confirmed",
+    description: "We'll confirm your appointment time and answer any questions before you come in.",
   },
   {
     step: "03",
-    icon: CheckCircle,
-    title: "Bring Your Vehicle In",
-    description: "Danielle will follow up to confirm your appointment details and answer any questions.",
+    icon: CreditCard,
+    title: "Bring Your Vehicle & Pay In Person",
+    description: "The $150 diagnostic fee is collected at the shop — cash or card accepted. No online payment required.",
   },
 ];
 
@@ -42,10 +41,10 @@ export default function BookPage() {
               $150 DIAGNOSTIC FEE
             </div>
             <h1 className="text-4xl sm:text-5xl font-extrabold text-white mb-4">
-              Book Your Appointment &amp; Pre-Pay Diagnostic Fee
+              Schedule Your Appointment
             </h1>
             <p className="text-white/60 text-lg max-w-2xl mx-auto">
-              The $150 diagnostic fee is required at booking. Pre-payment confirms your appointment.
+              Call us to book your appointment. Danielle will get you set up, confirm your slot, and answer any questions — then bring your vehicle in and pay the $150 diagnostic fee at the shop.
             </p>
           </motion.div>
         </div>
@@ -78,34 +77,34 @@ export default function BookPage() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Main booking area */}
           <div className="lg:col-span-2 space-y-8">
-            {/* Cal.com Embed */}
-            <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm">
-              <div style={{ width: "100%", height: "700px", overflow: "scroll" }} id="my-cal-inline-diagnostic-appointment" />
-              <Script
-                id="cal-embed"
-                strategy="afterInteractive"
-                dangerouslySetInnerHTML={{
-                  __html: `(function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-Cal("init", "diagnostic-appointment", {origin:"https://app.cal.com"});
-Cal.ns["diagnostic-appointment"]("inline", {
-  elementOrSelector:"#my-cal-inline-diagnostic-appointment",
-  config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true"},
-  calLink: "jw-auto-gal8qd/diagnostic-appointment",
-});
-Cal.ns["diagnostic-appointment"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});`,
-                }}
-              />
+            {/* Call to Book */}
+            <div className="bg-white border border-gray-200 rounded-2xl p-10 shadow-sm text-center">
+              <div className="w-16 h-16 bg-[#C8102E]/10 border border-[#C8102E]/30 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <Phone className="w-8 h-8 text-[#C8102E]" />
+              </div>
+              <h2 className="text-2xl font-extrabold text-[#0A1628] mb-3">Call to Schedule Your Appointment</h2>
+              <p className="text-gray-600 mb-8 max-w-md mx-auto">
+                Danielle will get you set up quickly. Have your vehicle info ready and she&apos;ll lock in your appointment on the spot.
+              </p>
+              <Button render={<a href="tel:+16786632455" />} size="lg" className="bg-[#C8102E] hover:bg-[#a00d24] text-white font-bold text-xl px-12 py-5 h-auto shadow-lg shadow-[#C8102E]/25 flex items-center gap-3 mx-auto w-full sm:w-auto justify-center">
+                <Phone className="w-6 h-6" />
+                (678) 663-2455
+              </Button>
+              <p className="text-gray-400 text-sm mt-5">Mon–Fri · 8:00 AM – 5:00 PM · Vehicle pickup by 4:30 PM</p>
+              <div className="mt-6 pt-6 border-t border-gray-100">
+                <span className="text-[#C8102E] font-semibold text-sm">Hablamos español</span>
+              </div>
             </div>
 
-            {/* Stripe Payment */}
+            {/* In-Person Payment Notice */}
             <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 bg-[#C8102E]/10 border border-[#C8102E]/30 rounded-lg flex items-center justify-center">
                   <CreditCard className="w-5 h-5 text-[#C8102E]" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-[#0A1628]">Pre-Pay Diagnostic Fee</h3>
-                  <p className="text-gray-500 text-sm">Confirms your appointment slot</p>
+                  <h3 className="font-bold text-[#0A1628]">$150 Diagnostic Fee</h3>
+                  <p className="text-gray-500 text-sm">Paid at the shop — cash or card accepted</p>
                 </div>
               </div>
               <div className="bg-gray-50 border border-gray-200 rounded-xl p-6 mb-6">
@@ -115,13 +114,12 @@ Cal.ns["diagnostic-appointment"]("ui", {"hideEventTypeDetails":false,"layout":"m
                 </div>
                 <p className="text-gray-500 text-xs">Non-refundable · Covers full diagnostic, not a code read</p>
               </div>
-              <Button
-                render={<a href="STRIPE_PAYMENT_LINK" target="_blank" rel="noopener noreferrer" />}
-                className="w-full bg-[#C8102E] hover:bg-[#a00d24] text-white font-bold py-4 h-auto text-base"
-              >
-                Pay $150.00 — Confirm Appointment
-              </Button>
-              <p className="text-gray-400 text-xs text-center mt-3">Secured by Stripe · No card stored after payment</p>
+              <div className="bg-[#0A1628]/5 border border-[#0A1628]/10 rounded-xl p-5 text-center">
+                <p className="text-[#0A1628] font-semibold text-sm mb-1">Collected at the shop when you arrive</p>
+                <p className="text-gray-600 text-sm">
+                  Call to confirm your appointment slot, then pay the $150 fee in person. We accept cash and card.
+                </p>
+              </div>
             </div>
           </div>
 
@@ -168,13 +166,13 @@ Cal.ns["diagnostic-appointment"]("ui", {"hideEventTypeDetails":false,"layout":"m
             <div className="bg-white border border-gray-200 rounded-xl p-6">
               <div className="flex items-center gap-2 mb-3">
                 <Phone className="w-5 h-5 text-[#C8102E]" />
-                <h3 className="font-bold text-[#0A1628]">Prefer to Call?</h3>
+                <h3 className="font-bold text-[#0A1628]">Call to Schedule</h3>
               </div>
               <p className="text-gray-600 text-sm mb-4">
-                Talk to Danielle, our scheduling coordinator. She&apos;ll get you set up quickly.
+                Talk to Danielle, our scheduling coordinator. She&apos;ll get you locked in quickly.
               </p>
-              <Button render={<a href="tel:+16783100267" />} className="w-full bg-[#0A1628] hover:bg-[#1a2a42] text-white font-semibold">
-                (678) 310-0267
+              <Button render={<a href="tel:+16786632455" />} className="w-full bg-[#0A1628] hover:bg-[#1a2a42] text-white font-semibold">
+                (678) 663-2455
               </Button>
               <div className="mt-4 text-center">
                 <span className="text-[#C8102E] font-semibold text-sm">Hablamos español</span>
@@ -185,7 +183,7 @@ Cal.ns["diagnostic-appointment"]("ui", {"hideEventTypeDetails":false,"layout":"m
             <div className="bg-[#C8102E] rounded-xl p-6 text-white">
               <h3 className="font-black text-xl mb-2">$150 Fee Policy</h3>
               <ul className="space-y-2 text-sm text-white/80">
-                <li>• Required at booking — no exceptions</li>
+                <li>• Required when you arrive — no exceptions</li>
                 <li>• Non-refundable</li>
                 <li>• Covers complete diagnostic, not a code read</li>
                 <li>• Written diagnosis provided</li>

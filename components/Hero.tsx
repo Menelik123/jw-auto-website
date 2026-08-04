@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Phone, Calendar } from "lucide-react";
+import { Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function Hero() {
@@ -52,26 +52,25 @@ export default function Hero() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button
-              render={<Link href="/book" />}
+              render={<a href="tel:+16786632455" />}
               size="lg"
               className="bg-[#C8102E] hover:bg-[#a00d24] text-white font-bold text-base px-8 py-4 h-auto shadow-lg shadow-[#C8102E]/25 flex items-center gap-2"
             >
-              <Calendar className="w-5 h-5" />
-              Book &amp; Pre-Pay Diagnostic
+              <Phone className="w-5 h-5" />
+              Call to Book: (678) 663-2455
             </Button>
             <Button
-              render={<a href="tel:+16783100267" />}
+              render={<Link href="/book" />}
               size="lg"
               variant="outline"
               className="border-white/40 text-white hover:bg-white/10 hover:border-white/70 font-bold text-base px-8 py-4 h-auto bg-transparent flex items-center gap-2"
             >
-              <Phone className="w-5 h-5" />
-              Call Now: (678) 310-0267
+              How It Works
             </Button>
           </div>
 
           <p className="text-white/40 text-sm mt-6">
-            $150 diagnostic fee required at booking · Mon–Fri 8AM–5PM only
+            $150 diagnostic fee · Mon–Fri 8AM–5PM · Call to schedule
           </p>
         </motion.div>
       </div>

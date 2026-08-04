@@ -180,14 +180,14 @@ export default function HomePage() {
             Ready to Get It Fixed Right?
           </h2>
           <p className="text-white/80 text-lg mb-8">
-            Book your appointment online and pre-pay the $150 diagnostic fee to confirm your slot.
+            Call us to schedule your appointment. The $150 diagnostic fee is collected at the shop — cash or card accepted.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button render={<Link href="/book" />} size="lg" className="bg-white text-[#C8102E] hover:bg-gray-100 font-bold text-base px-10 py-4 h-auto">
-              Book &amp; Pre-Pay Now
+            <Button render={<a href="tel:+16786632455" />} size="lg" className="bg-white text-[#C8102E] hover:bg-gray-100 font-bold text-base px-10 py-4 h-auto">
+              Call (678) 663-2455
             </Button>
-            <Button render={<a href="tel:+16783100267" />} size="lg" variant="outline" className="border-white text-white hover:bg-white/10 font-bold text-base px-10 py-4 h-auto bg-transparent">
-              Call (678) 310-0267
+            <Button render={<Link href="/book" />} size="lg" variant="outline" className="border-white text-white hover:bg-white/10 font-bold text-base px-10 py-4 h-auto bg-transparent">
+              How It Works
             </Button>
           </div>
         </div>

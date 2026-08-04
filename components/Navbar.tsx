@@ -62,8 +62,8 @@ export default function Navbar() {
 
           {/* Desktop CTA */}
           <div className="hidden md:block">
-            <Button render={<Link href="/book" />} className="bg-[#C8102E] hover:bg-[#a00d24] text-white font-semibold px-5 py-2">
-              Book Now
+            <Button render={<a href="tel:+16786632455" />} className="bg-[#C8102E] hover:bg-[#a00d24] text-white font-semibold px-5 py-2">
+              Call to Book
             </Button>
           </div>
 
@@ -95,8 +95,8 @@ export default function Navbar() {
                       {link.label}
                     </Link>
                   ))}
-                  <Button render={<Link href="/book" onClick={() => setOpen(false)} />} className="bg-[#C8102E] hover:bg-[#a00d24] text-white font-semibold mt-4">
-                    Book Now
+                  <Button render={<a href="tel:+16786632455" />} className="bg-[#C8102E] hover:bg-[#a00d24] text-white font-semibold mt-4">
+                    Call to Book
                   </Button>
                 </div>
               </SheetContent>
